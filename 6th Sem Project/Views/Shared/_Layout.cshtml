@@ -60,13 +60,22 @@
 
                 <!-- Buy Icon -->
                 <div class="d-flex align-items-center">
-                    <a href="#" class="text-white fs-4 me-3">
+                    <a asp-area="" asp-controller="ShoppingCart" asp-action="Index" class="text-white fs-5 me-2">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <a href="/signup" class="text-white fs-4">
-                        Sign Up
+
+                    <div class="d-flex align-items-center">
+                        <a asp-area="" asp-controller="SLogin" asp-action="Signup" class="text-white fs-5 ms-3 me-2">
+                            Sign Up
+                        </a>
+
+                    </div>
+
+                    <a asp-controller="SAcountDetails" asp-action="Index" class="ms-4">
+                        <img src="~/images/Shashwat.jpg" alt="Profile" style="width: 40px; height: 40px; border-radius: 50%; cursor: pointer;">
                     </a>
-                </div>
+
+
 
             </div>
         </nav>
@@ -78,11 +87,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - _6th_Sem_Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+   
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
