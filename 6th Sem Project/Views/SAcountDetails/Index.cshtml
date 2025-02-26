@@ -64,6 +64,7 @@
 
     <!-- Sidebar Navigation Menu -->
     <div class="sidebar">
+
         <a asp-controller="SAcountDetails" asp-action="Index" class="active">
             <i class="fa fa-user"></i> My Profile
         </a>
@@ -84,6 +85,13 @@
         <a asp-controller="Auth" asp-action="Logout">
             <i class="fa fa-sign-out-alt"></i> Log Out
         </a>
+
+        <a asp-controller="SAcountDetails" asp-action="Index" class="active">My Profile</a>
+        <a asp-controller="SAcountDetails" asp-action="EnrolledCourses">Enrolled Courses</a>
+        <a asp-controller="SAcountDetails" asp-action="Wishlisht">Wishlist</a>
+        @* <a asp-controller="SAcountDetails" asp-action="Index">Courses</a> *@ 
+        <a asp-controller="SAcountDetails" asp-action="Settings">Settings</a>
+        <a asp-controller="Auth" asp-action="Logout">Log Out</a>
     </div>
 
     <!-- Main Content Area -->

@@ -112,6 +112,7 @@
 
 
 
+
     <!-- Sidebar Navigation Menu -->
     <div class="sidebar">
         <a asp-controller="SAcountDetails" asp-action="Index" class="active">
@@ -134,6 +135,17 @@
         <a asp-controller="Auth" asp-action="Logout">
             <i class="fa fa-sign-out-alt"></i> Log Out
         </a>
+
+    
+
+    <!-- Sidebar Navigation Menu -->
+    <div class="sidebar">
+        <a asp-controller="SAcountDetails" asp-action="Index" >My Profile</a>
+        <a asp-controller="SAcountDetails" asp-action="EnrolledCourses" class="active">Enrolled Courses</a>
+        <a asp-controller="SAcountDetails" asp-action="Wishlisht">Wishlist</a>
+        @* <a asp-controller="SAcountDetails" asp-action="Index">Courses</a> *@ 
+        <a asp-controller="SAcountDetails" asp-action="Settings">Settings</a>
+        <a asp-controller="Auth" asp-action="Logout">Log Out</a>
     </div>
 
     <!-- Main Content -->
@@ -151,7 +163,10 @@
         <div class="course-list" id="courseList">
 
             <div class="course-item" data-status="pending">
+
                 <img src="/images/programming-background-with-person-working-with-codes-computer.jpg" alt="Course">
+
+                <img src="https://via.placeholder.com/50" alt="Course">
                 <div class="course-details">
                     <b>The Complete Python</b>
                     <p>Short Description</p>
@@ -171,6 +186,7 @@
 
             <div class="course-item" data-status="pending">
                 <img src="/images/programming-background-with-person-working-with-codes-computer.jpg" alt="Course">
+                <img src="https://via.placeholder.com/50" alt="Course">
                 <div class="course-details">
                     <b>JavaScript Essentials</b>
                     <p>Short Description</p>

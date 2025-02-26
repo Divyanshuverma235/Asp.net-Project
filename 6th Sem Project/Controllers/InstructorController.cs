@@ -4,6 +4,7 @@ namespace _6th_Sem_Project.Controllers
 {
     public class InstructorController : Controller
     {
+
         public IActionResult InsIndex()
         {
             return View();
@@ -13,7 +14,15 @@ namespace _6th_Sem_Project.Controllers
             return View();
         }
 
+
         public IActionResult CourseBuilder()
+        {
+            return View();
+        }
+
+
+        public IActionResult Index()
+
         {
             return View();
         }

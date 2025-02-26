@@ -4,7 +4,7 @@ namespace _6th_Sem_Project.Controllers
 {
     public class SLogin : Controller
     {
-        public IActionResult Index()
+        public IActionResult Login()
         {
             return View();
         }

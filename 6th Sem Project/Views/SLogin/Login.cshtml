@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Signup";
+    ViewData["Title"] = "Login";
 }
 
 <body style="background:black;">
@@ -15,28 +15,22 @@
                 <div id="instructor-tab" onclick="redirectToInstructorPage()" style="flex: 1; text-align: center; padding: 10px; color: #b0b3b8; cursor: pointer;">Instructors</div>
             </div>
 
-            <div>First Name*</div>
-            <input type="text" placeholder="Enter first name" style="width: 100%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none; margin: 5px 0 10px;">
-
-            <div>Last Name*</div>
-            <input type="text" placeholder="Enter last name" style="width: 100%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none; margin: 5px 0 10px;">
-
             <div>Email Address*</div>
             <input type="email" placeholder="Enter email address" style="width: 100%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none; margin: 5px 0 10px;">
 
-            <div>Phone Number*</div>
-            <div style="display: flex; gap: 5px;">
-                <input type="text" placeholder="+91" style="width: 30%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none;">
-                <input type="text" placeholder="Enter phone number" style="width: 70%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none;">
+            <div>Password*</div>
+            <input type="password" placeholder="Enter password" style="width: 100%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none; margin: 5px 0 10px;">
+            f
+            <!-- Forgot Password Link -->
+            <div style="text-align: right; font-size: 14px; color: #ffcc00; cursor: pointer; margin-bottom: 10px;">Forgot Password?</div>
+
+            <div style="width: 100%; padding: 10px; background: #ffcc00; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; margin-top: 10px; text-align: center;">Login</div>
+
+            <!-- Sign-up Redirect -->
+            <div style="text-align: center; margin-top: 10px; font-size: 14px;">
+                <span>Don't have an account? </span>
+                <a href="Signup.cshtml" style="color: #ffcc00; text-decoration: none; font-weight: bold;">Sign up</a>
             </div>
-
-            <div>Create Password*</div>
-            <input type="password" placeholder="Create password" style="width: 100%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none; margin: 5px 0 10px;">
-
-            <div>Confirm Password*</div>
-            <input type="password" placeholder="Confirm password" style="width: 100%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none; margin: 5px 0 10px;">
-
-            <div style="width: 100%; padding: 10px; background: #ffcc00; font-size: 16px; font-weight: bold; border-radius: 5px; cursor: pointer; margin-top: 10px; text-align: center;">Create Account</div>
         </div>
 
         <!-- Animation -->
@@ -51,7 +45,6 @@
                 path: 'https://lottie.host/YOUR_JSON_URL_HERE.json' // यहां सही JSON लिंक डालें
             });
         </script>
-
     </div>
 
     <!-- Toggle Switch Script -->
@@ -70,3 +63,5 @@
         }
     </script>
 </body>
+
+
