@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=SAcountDetails}/{action=Index}/{id?}");
+    pattern: "{controller=InstructorLogin}/{action=VerifyPhone}/{id?}");
 
 app.Run();

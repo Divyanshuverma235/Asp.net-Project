@@ -15,6 +15,37 @@
             background-color: #f8f9fa;
         }
 
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            background-color: #f9f6e6;
+            height: 100vh;
+            position: fixed; /* Sidebar remains fixed */
+           
+            padding: 20px;
+        }
+
+            /* Sidebar links */
+            .sidebar a {
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                color: black;
+                margin-bottom: 5px;
+            }
+
+                /* Active or hovered sidebar links */
+                .sidebar a.active, .sidebar a:hover {
+                    background-color: gold;
+                    border-radius: 5px;
+                }
+
+        /* Main content area (pushed right because of sidebar) */
+        .content {
+            margin-left: 270px; /* Adjust to account for the fixed sidebar width */
+            padding: 20px;
+        }
+
         .wishlist-container {
             max-width: 900px;
             margin: auto;
@@ -75,40 +106,13 @@
             width: 100%;
             border-radius: 5px;
         }
-
-        .sidebar {
-            width: 250px;
-            background-color: #f9f6e6;
-            height: 100vh;
-            position: fixed;
-            padding: 20px;
-        }
-
-            .sidebar a {
-                display: block;
-                padding: 10px;
-                text-decoration: none;
-                color: black;
-                margin-bottom: 5px;
-            }
-
-                .sidebar a.active, .sidebar a:hover {
-                    background-color: gold;
-                    border-radius: 5px;
-                }
-
-        .content {
-            margin-left: 270px;
-            padding: 20px;
-        }
     </style>
 </head>
 <body>
 
     <!-- Sidebar Navigation Menu -->
     <div class="sidebar">
-<<<<<<< HEAD
-        <a asp-controller="SAcountDetails" asp-action="Index" class="active">
+        <a asp-controller="SAcountDetails" asp-action="Index" >
             <i class="fa fa-user"></i> My Profile
         </a>
 
@@ -116,40 +120,28 @@
             <i class="fa fa-book"></i> Enrolled Courses
         </a>
 
-        <a asp-controller="SAcountDetails" asp-action="Wishlisht">
+        <a asp-controller="SAcountDetails" asp-action="Wishlisht" class="active">
             <i class="fa fa-heart"></i> Wishlist
         </a>
 
-        @* <a asp-controller="SAcountDetails" asp-action="Index">Courses</a> *@ 
-       <a asp-controller="SAcountDetails" asp-action="Settings">
+        <a asp-controller="SAcountDetails" asp-action="Settings">
             <i class="fa fa-cog"></i> Settings
         </a>
 
         <a asp-controller="Auth" asp-action="Logout">
             <i class="fa fa-sign-out-alt"></i> Log Out
         </a>
-=======
-        <a asp-controller="SAcountDetails" asp-action="Index">My Profile</a>
-        <a asp-controller="SAcountDetails" asp-action="EnrolledCourses">Enrolled Courses</a>
-        <a asp-controller="SAcountDetails" asp-action="Wishlisht" class="active">Wishlist</a>
-        <a asp-controller="SAcountDetails" asp-action="Settings">Settings</a>
-        <a asp-controller="Auth" asp-action="Logout">Log Out</a>
->>>>>>> ab6a6dfc41dc77f66943ca8da685f188b40591a7
     </div>
 
     <!-- Main Content Area -->
     <div class="content">
         <h3>My Wishlist</h3>
-        <p>3 Courses in Wishlist</p>
+        
 
         <div class="wishlist-container">
             <!-- Course 1 -->
             <div class="course-item">
-<<<<<<< HEAD
                 <img src="/images/programming-background-with-person-working-with-codes-computer.jpg" alt="Course Image">
-=======
-                <img src="https://source.unsplash.com/200x150/?python,code" alt="Course Image">
->>>>>>> ab6a6dfc41dc77f66943ca8da685f188b40591a7
                 <div class="course-details">
                     <a href="#" class="text-decoration-none text-dark fw-bold">The Complete Python Bootcamp From Zero to Hero in Python</a>
                     <p class="mb-1">4.5 ⭐⭐⭐⭐⭐ (Review Count)</p>
@@ -161,11 +153,7 @@
 
             <!-- Course 2 -->
             <div class="course-item">
-<<<<<<< HEAD
                 <img src="/images/programming-background-with-person-working-with-codes-computer.jpg" alt="Course Image">
-=======
-                <img src="https://source.unsplash.com/200x150/?python,programming" alt="Course Image">
->>>>>>> ab6a6dfc41dc77f66943ca8da685f188b40591a7
                 <div class="course-details">
                     <a href="#" class="text-decoration-none text-dark fw-bold">The Complete Python Bootcamp From Zero to Hero in Python</a>
                     <p class="mb-1">4.5 ⭐⭐⭐⭐⭐ (Review Count)</p>
@@ -177,11 +165,7 @@
 
             <!-- Course 3 -->
             <div class="course-item">
-<<<<<<< HEAD
                 <img src="/images/programming-background-with-person-working-with-codes-computer.jpg" alt="Course Image">
-=======
-                <img src="https://source.unsplash.com/200x150/?python,coding" alt="Course Image">
->>>>>>> ab6a6dfc41dc77f66943ca8da685f188b40591a7
                 <div class="course-details">
                     <a href="#" class="text-decoration-none text-dark fw-bold">The Complete Python Bootcamp From Zero to Hero in Python</a>
                     <p class="mb-1">4.5 ⭐⭐⭐⭐⭐ (Review Count)</p>

@@ -9,10 +9,10 @@
 
             <!-- Toggle Switch -->
             <div style="display: flex; background: #161D29; border-radius: 25px; padding: 5px; width: 100%; margin-bottom: 15px;">
-                <div id="student-tab" onclick="toggleUserType('student')" style="flex: 1; text-align: center; padding: 10px; background: #000814; border-radius: 20px; color: white; font-weight: bold; cursor: pointer;">Student</div>
+                <div id="student-tab" onclick="redirectToStudentPage()" style="flex: 1; text-align: center; padding: 10px; color: #b0b3b8; cursor: pointer;">Student</div>
 
                 <!-- Instructor Button -->
-                <div id="instructor-tab" onclick="redirectToInstructorPage()" style="flex: 1; text-align: center; padding: 10px; color: #b0b3b8; cursor: pointer;">Instructors</div>
+                <div id="instructor-tab" onclick="toggleUserType('instructor')" style="flex: 1; text-align: center; padding: 10px; background: #000814; border-radius: 20px; color: white; font-weight: bold; cursor: pointer;">Instructors</div>
             </div>
 
             <div>Email Address*</div>
@@ -53,20 +53,20 @@
     <!-- Toggle Switch Script -->
     <script>
         function toggleUserType(type) {
-            if (type === 'student') {
-                document.getElementById('student-tab').style.background = '#000814';
-                document.getElementById('student-tab').style.color = 'white';
-                document.getElementById('instructor-tab').style.background = 'transparent';
-                document.getElementById('instructor-tab').style.color = '#b0b3b8';
+            if (type === 'instructor') {
+                document.getElementById('instructor-tab').style.background = '#000814';
+                document.getElementById('instructor-tab').style.color = 'white';
+                document.getElementById('student-tab').style.background = 'transparent';
+                document.getElementById('student-tab').style.color = '#b0b3b8';
             }
         }
 
         function redirectToStudentPage() {
-            window.location.href = "@Url.Action("Index", "Slogin")"; // Redirect to the Index action in the Slogin controller
+            window.location.href = "@Url.Action("Login", "Slogin")"; // Redirect to the Index action in the Slogin controller
         }
 
         function redirectToInstructorPage() {
-            window.location.href = "@Url.Action("InstructorIndex", "InstructorLogin")"; // Redirect to the InstructorIndex action in the InstructorLogin controller
+            window.location.href = "instructor.html"; // अपनी सही पेज लिंक डालें
         }
     </script>
 </body>

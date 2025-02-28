@@ -41,8 +41,6 @@
             padding: 20px;
         }
 
-       
-
         .filter-tabs {
             margin-bottom: 20px;
         }
@@ -110,16 +108,13 @@
 </head>
 <body>
 
-
-
-
     <!-- Sidebar Navigation Menu -->
     <div class="sidebar">
-        <a asp-controller="SAcountDetails" asp-action="Index" class="active">
+        <a asp-controller="SAcountDetails" asp-action="Index">
             <i class="fa fa-user"></i> My Profile
         </a>
 
-        <a asp-controller="SAcountDetails" asp-action="EnrolledCourses">
+        <a asp-controller="SAcountDetails" asp-action="EnrolledCourses" class="active">
             <i class="fa fa-book"></i> Enrolled Courses
         </a>
 
@@ -127,25 +122,13 @@
             <i class="fa fa-heart"></i> Wishlist
         </a>
 
-        @* <a asp-controller="SAcountDetails" asp-action="Index">Courses</a> *@ 
-       <a asp-controller="SAcountDetails" asp-action="Settings">
+        <a asp-controller="SAcountDetails" asp-action="Settings">
             <i class="fa fa-cog"></i> Settings
         </a>
 
         <a asp-controller="Auth" asp-action="Logout">
             <i class="fa fa-sign-out-alt"></i> Log Out
         </a>
-
-    
-
-    <!-- Sidebar Navigation Menu -->
-    <div class="sidebar">
-        <a asp-controller="SAcountDetails" asp-action="Index" >My Profile</a>
-        <a asp-controller="SAcountDetails" asp-action="EnrolledCourses" class="active">Enrolled Courses</a>
-        <a asp-controller="SAcountDetails" asp-action="Wishlisht">Wishlist</a>
-        @* <a asp-controller="SAcountDetails" asp-action="Index">Courses</a> *@ 
-        <a asp-controller="SAcountDetails" asp-action="Settings">Settings</a>
-        <a asp-controller="Auth" asp-action="Logout">Log Out</a>
     </div>
 
     <!-- Main Content -->
@@ -161,11 +144,7 @@
 
         <!-- Course List -->
         <div class="course-list" id="courseList">
-
             <div class="course-item" data-status="pending">
-
-                <img src="/images/programming-background-with-person-working-with-codes-computer.jpg" alt="Course">
-
                 <img src="https://via.placeholder.com/50" alt="Course">
                 <div class="course-details">
                     <b>The Complete Python</b>
@@ -176,7 +155,7 @@
                     <div class="progress" style="width: 60%; background: blue;"></div>
                 </div>
                 <div class="dropdown">
-                    <span class="options" data-bs-toggle="dropdown">⋮</span>
+                    <span class="options dropdown-toggle" data-bs-toggle="dropdown">⋮</span>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item mark-completed" href="#">✅ Mark as Completed</a></li>
                         <li><a class="dropdown-item remove-course" href="#">❌ Remove</a></li>
@@ -185,7 +164,6 @@
             </div>
 
             <div class="course-item" data-status="pending">
-                <img src="/images/programming-background-with-person-working-with-codes-computer.jpg" alt="Course">
                 <img src="https://via.placeholder.com/50" alt="Course">
                 <div class="course-details">
                     <b>JavaScript Essentials</b>
@@ -196,7 +174,7 @@
                     <div class="progress" style="width: 20%; background: blue;"></div>
                 </div>
                 <div class="dropdown">
-                    <span class="options" data-bs-toggle="dropdown">⋮</span>
+                    <span class="options dropdown-toggle" data-bs-toggle="dropdown">⋮</span>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item mark-completed" href="#">✅ Mark as Completed</a></li>
                         <li><a class="dropdown-item remove-course" href="#">❌ Remove</a></li>
