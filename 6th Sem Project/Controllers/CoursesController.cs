@@ -8,8 +8,12 @@ namespace _6th_Sem_Project.Controllers
         {
             return View();
         }
+        public IActionResult CourseDetails()
+        {
+            return View();
+        }
 
-        
-        
+
+
     }
 }
