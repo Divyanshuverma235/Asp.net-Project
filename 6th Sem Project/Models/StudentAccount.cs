@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace _6th_Sem_Project.Models
 {
     public class StudentAccount
     {
-        public int Id { get; set; }
+        [Key]
 
         [Required(ErrorMessage = "First Name is required")]
         public string FirstName { get; set; }

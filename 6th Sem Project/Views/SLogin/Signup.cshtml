@@ -30,11 +30,10 @@
                 <input name="PhoneNumber" type="text" placeholder="Enter phone number" style="width: 70%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none;">
             </div>
 
-            <div>Create Password*</div>
+            <div>Enter Password*</div>
             <input name="Password" type="password" placeholder="Create password" style="width: 100%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none; margin: 5px 0 10px;">
 
-            <div>Confirm Password*</div>
-            <input name="ConfirmPassword" type="password" placeholder="Confirm password" style="width: 100%; padding: 10px; background: #161D29; border: 1px solid #444; color: white; border-radius: 5px; outline: none; margin: 5px 0 10px;">
+           
 
             <!-- Forgot Password Link -->
             <div style="text-align: right; font-size: 14px; margin-bottom: 10px;">
@@ -50,17 +49,20 @@
         </form>
 
         <!-- Animation -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.8/lottie.min.js"></script>
-        <div id="animation-container" style="width: 50%; height: 100%; margin-left: -50px;"></div>
-        <script>
-            var animation = lottie.loadAnimation({
-                container: document.getElementById('animation-container'),
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                path: 'https://lottie.host/YOUR_JSON_URL_HERE.json'
-            });
-        </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.8/lottie.min.js"></script>
+
+<div id="animation-container" style="width: 50%; height: 100%; margin-left: -50px;"></div>
+
+<script>
+    var animation = lottie.loadAnimation({
+        container: document.getElementById('animation-container'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://lottie.host/9f28c9fe-8669-4f99-8d78-1fec2f5d15f7/E6EFpXJKEJ.lottie'
+    });
+</script>
+
 
     </div>
 
@@ -76,7 +78,7 @@
         }
 
         function redirectToInstructorPage() {
-            window.location.href = "instructor.html";
+            window.location.href = "@Url.Action("InstructorIndex", "InstructorLogin")"; // Redirect to the InstructorIndex action in the InstructorLogin controller
         }
     </script>
 </body>
