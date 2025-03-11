@@ -27,7 +27,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow">
             <div class="container-fluid">
 
                 <!-- Logo -->
@@ -79,25 +79,26 @@
 
 
 
-                <a asp-controller="SAcountDetails" asp-action="Index">
-                    <img src="~/images/Shashwat.jpg" alt="Profile" style="width: 40px; height: 40px; border-radius: 50%; cursor: pointer;">
-                </a>
+                    <a asp-controller="SAcountDetails" asp-action="Index">
+                        <img src="~/images/Shashwat.jpg" alt="Profile" style="width: 40px; height: 40px; border-radius: 50%; cursor: pointer;">
+                    </a>
 
 
 
+                </div>
             </div>
         </nav>
     </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div>
+        <main role="main" >
             @RenderBody()
         </main>
     </div>
 
-    <!--footer part-->
+    <!--footer Start -->
 
-    <footer class="bg" style="background-image: url('/images/footer-bg.jpg'); background-size: cover; height:610px;  color: white; padding: 130px 100px; margin-top:100px; font-family: Arial, sans-serif; position: relative; width: 100%;">
+    <footer style="background-image: url('/images/footer-bg.jpg'); color:white; background-size: cover; height:610px;  padding: 130px 100px; margin-top:100px; font-family: Arial, sans-serif; position: relative; width: 100%;  margin-bottom:0px;">
 
         <div style="display: flex; justify-content: space-between; flex-wrap: wrap; position: relative; z-index: 2; margin-top: 140px; ">
             <!-- Left Section -->
@@ -117,7 +118,6 @@
                 </div>
 
             </div>
-
 
             <!-- Middle Sections -->
             <div style="display: flex; flex-wrap: wrap; gap: 40px;">
@@ -184,7 +184,6 @@
 
     </footer>
 
-
    
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -203,6 +202,4 @@
         });
     </script>
 </body>
-
-
 </html>
