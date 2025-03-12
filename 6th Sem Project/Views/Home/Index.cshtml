@@ -21,8 +21,8 @@
                 <p style="font-size: 18px;">
                     Wherever you are, enhance your skills with our online coding courses.
                 </p>
-               
-                
+
+                <!-- First Button Start  -->
                 <div style="display:flex; gap:20px; justify-content:center; align-items:center;">
                     <button class="button-86" role="button"
                             onclick="window.location.href='@Url.Action("Login", "SLogin")'">
@@ -34,9 +34,9 @@
                         Book a Demo
                     </button>
                 </div>
-
-                
             </div>
+            <!-- First Button End  -->
+
             <div style="flex: 1; text-align: center;">
                 <img src="~/images/home1-removebg-preview.png" alt="Learning Image" style="max-width: 90%; border-radius: 10px;">
             </div>
@@ -61,16 +61,21 @@
 &lt;/html&gt;
             </pre>
 
-                <button style="background-color: yellow; color: black; padding: 10px 20px; border: none; cursor: pointer;"
-                        onclick="window.location.href='@Url.Action("Login", "SLogin")'">
+                <!-- Second Button Start  -->
+                <div style="display:flex; gap:20px;">
+                    <button class="button-86" role="button"
+                            onclick="window.location.href='@Url.Action("Login", "SLogin")'">
                     Learn More
                 </button>
 
-                <button style="background-color: gray; color: white; padding: 10px 20px; border: none; cursor: pointer;"
-                        onclick="window.location.href='@Url.Action("Login", "SLogin")'">
+                    <button class="button-86" role="button"
+                            onclick="window.location.href='@Url.Action("Login", "SLogin")'">
                     Book a Demo
                 </button>
             </div>
+            </div>
+            <!-- Second Button End  -->
+
             <div style="flex: 1; text-align: center;">
                 <img src="/images/newhtml.jpg" alt="Coding Image" style="max-width: 90%; border-radius: 10px;">
             </div>
@@ -103,17 +108,18 @@
 &lt;/body&gt;
 &lt;/html&gt;
         </pre>
-
-                <button style="background-color: yellow; color: black; padding: 10px 20px; border: none; cursor: pointer;"
-                        onclick="window.location.href='@Url.Action("Login", "SLogin")'">
+                <div style="display:flex; gap:20px; ">
+                    <button class="button-86" role="button"
+                            onclick="window.location.href='@Url.Action("Login", "SLogin")'">
                     Learn More
                 </button>
 
-                <button style="background-color: gray; color: white; padding: 10px 20px; border: none; cursor: pointer;"
-                        onclick="window.location.href='@Url.Action("Login", "SLogin")'">
+                    <button class="button-86" role="button"
+                            onclick="window.location.href='@Url.Action("Login", "SLogin")'">
                     Book a Demo
                 </button>
             </div>
+        </div>
         </div>
 
 
@@ -224,12 +230,14 @@
 
         <!-- Buttons -->
         <div style="margin-top: 30px;">
-            <button style="background-color: yellow; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-                Explore Full Catalog →
+            <div style="display:flex; gap:20px; justify-content:center; align-items:center;">
+                <button class="button-86" role="button">
+                Full Catalog →
             </button>
-            <button style="background-color: black; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-                Learn More
+                <button class="button-86" role="button">
+                    Learn More
             </button>
+        </div>
         </div>
 
 
@@ -238,7 +246,7 @@
 
         <!--yaha se Team member-->
 
-        <div style=" padding: 50px; text-align: center;">
+        <div style="  padding: 50px; text-align: center;">
 
             <!-- Team Title -->
             <button style="background-color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer;">
@@ -358,16 +366,16 @@
 
         <!-- Text Section -->
         <div style="margin-left: 60px; text-align: left; max-width: 500px;">
-            <h2 style="font-style: italic; font-size: 28px;">
+            <h2 style="font-style: italic; font-size: 28px; color: black;">
                 Become an <span style="color: #2ecc71;">instructor</span>
             </h2>
             <p style="color: #333; font-size: 16px; margin-top: 10px;">
                 Instructors from around the world teach millions of students on StudyNotion. We provide the tools and skills to teach what you love.
             </p>
-
-            <button style="margin-top: 20px; background: #f1c40f; color: black; padding: 12px 24px; border-radius: 8px; font-size: 16px; border: none; cursor: pointer;">
-                Start Teaching Today →
-            </button>
+            <div style="display:flex; gap:40px; ">
+                <button class="button-86" role="button">
+                Learn Today →
+                </button>
         </div>
 
     </div>
