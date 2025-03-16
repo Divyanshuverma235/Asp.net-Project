@@ -15,17 +15,14 @@
             background-color: #f8f9fa;
         }
 
-        /* Sidebar styling */
         .sidebar {
             width: 250px;
             background-color: #f9f6e6;
             height: 100vh;
-            position: fixed; /* Sidebar remains fixed */
-           
+            position: fixed;
             padding: 20px;
         }
 
-            /* Sidebar links */
             .sidebar a {
                 display: block;
                 padding: 10px;
@@ -34,15 +31,13 @@
                 margin-bottom: 5px;
             }
 
-                /* Active or hovered sidebar links */
                 .sidebar a.active, .sidebar a:hover {
                     background-color: gold;
                     border-radius: 5px;
                 }
 
-        /* Main content area (pushed right because of sidebar) */
         .content {
-            margin-left: 270px; /* Adjust to account for the fixed sidebar width */
+            margin-left: 270px;
             padding: 20px;
         }
 
@@ -112,70 +107,47 @@
 
     <!-- Sidebar Navigation Menu -->
     <div class="sidebar">
-        <a asp-controller="SAcountDetails" asp-action="Index" >
-            <i class="fa fa-user"></i> My Profile
-        </a>
-
-        <a asp-controller="SAcountDetails" asp-action="EnrolledCourses">
-            <i class="fa fa-book"></i> Enrolled Courses
-        </a>
-
-        <a asp-controller="SAcountDetails" asp-action="Wishlisht" class="active">
-            <i class="fa fa-heart"></i> Wishlist
-        </a>
-
-        <a asp-controller="SAcountDetails" asp-action="Settings">
-            <i class="fa fa-cog"></i> Settings
-        </a>
-
-        <a asp-controller="Auth" asp-action="Logout">
-            <i class="fa fa-sign-out-alt"></i> Log Out
-        </a>
+        <a asp-controller="SAcountDetails" asp-action="Index"><i class="fa fa-user"></i> My Profile</a>
+        <a asp-controller="SAcountDetails" asp-action="EnrolledCourses"><i class="fa fa-book"></i> Enrolled Courses</a>
+        <a asp-controller="SAcountDetails" asp-action="Wishlisht" class="active"><i class="fa fa-heart"></i> Wishlist</a>
+        <a asp-controller="SAcountDetails" asp-action="Settings"><i class="fa fa-cog"></i> Settings</a>
+        <a asp-controller="Auth" asp-action="Logout"><i class="fa fa-sign-out-alt"></i> Log Out</a>
     </div>
 
     <!-- Main Content Area -->
     <div class="content">
         <h3>My Wishlist</h3>
-        
-
         <div class="wishlist-container">
-            <!-- Course 1 -->
             <div class="course-item">
                 <img src="/images/programming-background-with-person-working-with-codes-computer.jpg" alt="Course Image">
                 <div class="course-details">
-                    <a href="#" class="text-decoration-none text-dark fw-bold">The Complete Python Bootcamp From Zero to Hero in Python</a>
+                    <a href="#" class="text-decoration-none text-dark fw-bold">The Complete Python Bootcamp</a>
                     <p class="mb-1">4.5 ⭐⭐⭐⭐⭐ (Review Count)</p>
                     <p>Total Courses • Lesson • Beginner</p>
                 </div>
                 <p class="price">Rs. 1,700</p>
                 <button class="remove-btn">🗑 Remove</button>
             </div>
-
-            <!-- Course 2 -->
             <div class="course-item">
                 <img src="/images/programming-background-with-person-working-with-codes-computer.jpg" alt="Course Image">
                 <div class="course-details">
-                    <a href="#" class="text-decoration-none text-dark fw-bold">The Complete Python Bootcamp From Zero to Hero in Python</a>
-                    <p class="mb-1">4.5 ⭐⭐⭐⭐⭐ (Review Count)</p>
-                    <p>Total Courses • Lesson • Beginner</p>
+                    <a href="#" class="text-decoration-none text-dark fw-bold">Advanced Java Programming</a>
+                    <p class="mb-1">4.8 ⭐⭐⭐⭐⭐ (Review Count)</p>
+                    <p>Total Courses • Lesson • Intermediate</p>
                 </div>
                 <p class="price">Rs. 2,100</p>
                 <button class="remove-btn">🗑 Remove</button>
             </div>
-
-            <!-- Course 3 -->
             <div class="course-item">
                 <img src="/images/programming-background-with-person-working-with-codes-computer.jpg" alt="Course Image">
                 <div class="course-details">
-                    <a href="#" class="text-decoration-none text-dark fw-bold">The Complete Python Bootcamp From Zero to Hero in Python</a>
-                    <p class="mb-1">4.5 ⭐⭐⭐⭐⭐ (Review Count)</p>
+                    <a href="#" class="text-decoration-none text-dark fw-bold">Web Development Mastery</a>
+                    <p class="mb-1">4.6 ⭐⭐⭐⭐⭐ (Review Count)</p>
                     <p>Total Courses • Lesson • Beginner</p>
                 </div>
                 <p class="price">Rs. 2,000</p>
                 <button class="remove-btn">🗑 Remove</button>
             </div>
-
-            <!-- Summary Card -->
             <div class="summary-card mt-3">
                 <p>Total:</p>
                 <h4>Rs. 4,500</h4>
@@ -184,6 +156,27 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Sare remove buttons ke liye event listener
+            let removeButtons = document.querySelectorAll(".remove-btn");
+
+            removeButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    this.parentElement.remove();
+                });
+            });
+
+            // Buy Now button ke liye event listener
+            let buyNowButton = document.querySelector(".buy-now");
+
+            buyNowButton.addEventListener("click", function () {
+                alert("Redirecting to payment page...");
+                window.location.href = "payment.cshtml"; // Replace with actual payment URL
+            });
+        });
+    </script>
 
 </body>
 </html>
